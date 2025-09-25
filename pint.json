@@ -1,0 +1,13 @@
+{
+    "preset": "psr12",
+    "rules": {
+        "blank_line_before_statement": true,
+        "concat_space": {
+            "spacing": "one"
+        },
+        "method_argument_space": true,
+        "types_spaces": {
+            "space": "single"
+        }
+    }
+}

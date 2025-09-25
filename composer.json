@@ -10,11 +10,16 @@
         }
     ],
     "require": {
-        "php": "^8.2"
+        "php": "^8.2",
+        "saloonphp/pagination-plugin": "^2.2",
+        "saloonphp/saloon": "^3.14"
     },
     "autoload": {
         "psr-4": {
-            "Jacobtims\\TMS\\": "src/"
+            "Jacobtims\\Tms\\": "src/"
         }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.25"
     }
 }
