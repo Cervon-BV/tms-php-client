@@ -16,9 +16,19 @@ class ListJobsRequests extends Request implements Paginatable, HasBody
 
     protected Method $method = Method::POST;
 
+    public function __construct(
+        protected array $filters = [],
+    ) {
+    }
+
     public function resolveEndpoint(): string
     {
         return '/jobs/list';
+    }
+
+    protected function defaultBody(): array
+    {
+        return $this->filters;
     }
 
     /** @return array<int, Job> */

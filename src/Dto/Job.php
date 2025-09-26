@@ -19,20 +19,21 @@ class Job
         public AddressReference $address,
         /** @var JobTask[] */
         public array $tasks,
-        public PaymentReference $outstanding_payment,
-        public int $total_tasks,
-        public int $total_items,
-        public bool $has_assemble,
+        public ?PaymentReference $outstanding_payment,
+        public ?int $total_tasks,
+        public ?int $total_items,
+        public ?bool $has_assemble,
         public string $status,
-        public TourReference $tour,
-        public string $arrival_time,
-        public int $service_time,
-        public bool $need_proposal,
-        public bool $drop_permission,
-        public bool $co_driver_needed,
-        public string $updated_date,
-        public string $created_date,
-    ) {}
+        public ?TourReference $tour,
+        public ?string $arrival_time,
+        public ?int $service_time,
+        public ?bool $need_proposal,
+        public ?bool $drop_permission,
+        public ?bool $co_driver_needed,
+        public ?string $updated_date,
+        public ?string $created_date,
+    ) {
+    }
 
     public static function fromResponse(array $data): self
     {
@@ -44,12 +45,14 @@ class Job
             contact: ContactReference::fromResponse($data['contact']),
             address: AddressReference::fromResponse($data['address']),
             tasks: JobTask::collect($data['tasks'] ?? []),
-            outstanding_payment: PaymentReference::fromResponse($data['outstanding_payment']),
+            outstanding_payment: isset($data['outstanding_payment'])
+                ? PaymentReference::fromResponse($data['outstanding_payment'])
+                : null,
             total_tasks: $data['total_tasks'],
             total_items: $data['total_items'],
             has_assemble: $data['has_assemble'],
             status: $data['status'],
-            tour: TourReference::fromResponse($data['tour']),
+            tour: isset($data['tour']) ? TourReference::fromResponse($data['tour']) : null,
             arrival_time: $data['arrival_time'],
             service_time: $data['service_time'],
             need_proposal: $data['need_proposal'],

@@ -10,9 +10,9 @@ use Jacobtims\Tms\Tms;
 trait SupportsJobsEndpoints
 {
     /** @return iterable<int, Job> */
-    public function listJobs(): iterable
+    public function listJobs(array $filters = []): iterable
     {
-        $request = new ListJobsRequests();
+        $request = new ListJobsRequests($filters);
 
         /** @var iterable<int, Job> $items */
         $items = $this->paginate($request)->items();

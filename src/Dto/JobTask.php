@@ -10,8 +10,8 @@ class JobTask
         public int $quantity,
         public string $description,
         public ?JobTaskItem $item,
-        public bool $has_item,
-        public int $quantity_remaining,
+        public ?bool $has_item,
+        public ?int $quantity_remaining,
     ) {
     }
 

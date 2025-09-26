@@ -6,12 +6,12 @@ class JobTaskItem
 {
     public function __construct(
         public string $name,
-        public float $length,
-        public float $width,
-        public float $height,
-        public float $weight,
-        public string $barcode,
-        public float $volume,
+        public ?float $length,
+        public ?float $width,
+        public ?float $height,
+        public ?float $weight,
+        public ?string $barcode,
+        public ?float $volume,
     ) {
     }
 
