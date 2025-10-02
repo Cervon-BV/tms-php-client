@@ -7,33 +7,31 @@ use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
-use Saloon\PaginationPlugin\Contracts\Paginatable;
 use Saloon\Traits\Body\HasJsonBody;
 
-class ListTaskTemplatesRequests extends Request implements Paginatable, HasBody
+class CreateTaskTemplateRequest extends Request implements HasBody
 {
     use HasJsonBody;
 
     protected Method $method = Method::POST;
 
     public function __construct(
-        protected array $filters = [],
+        protected array $properties,
     ) {
     }
 
     public function resolveEndpoint(): string
     {
-        return '/task-templates/list';
+        return '/task-templates';
     }
 
     protected function defaultBody(): array
     {
-        return $this->filters;
+        return $this->properties;
     }
 
-    /** @return array<int, TaskTemplate> */
-    public function createDtoFromResponse(Response $response): array
+    public function createDtoFromResponse(Response $response): TaskTemplate
     {
-        return TaskTemplate::collect($response->json());
+        return TaskTemplate::fromResponse($response->json());
     }
 }

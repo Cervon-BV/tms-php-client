@@ -1,16 +1,15 @@
 <?php
 
-namespace Jacobtims\Tms\Requests\TaskTemplates;
+namespace Jacobtims\Tms\Requests\Jobs;
 
-use Jacobtims\Tms\Dto\TaskTemplate;
+use Jacobtims\Tms\Dto\Job;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
-use Saloon\PaginationPlugin\Contracts\Paginatable;
 use Saloon\Traits\Body\HasJsonBody;
 
-class CreateTaskTemplateRequests extends Request implements HasBody
+class CreateJobRequest extends Request implements HasBody
 {
     use HasJsonBody;
 
@@ -23,7 +22,7 @@ class CreateTaskTemplateRequests extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return '/task-templates';
+        return '/jobs';
     }
 
     protected function defaultBody(): array
@@ -31,8 +30,8 @@ class CreateTaskTemplateRequests extends Request implements HasBody
         return $this->properties;
     }
 
-    public function createDtoFromResponse(Response $response): TaskTemplate
+    public function createDtoFromResponse(Response $response): Job
     {
-        return TaskTemplate::fromResponse($response->json());
+        return Job::fromResponse($response->json());
     }
 }

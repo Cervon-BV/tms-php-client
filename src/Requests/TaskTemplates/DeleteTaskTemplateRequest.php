@@ -2,15 +2,10 @@
 
 namespace Jacobtims\Tms\Requests\TaskTemplates;
 
-use Jacobtims\Tms\Dto\TaskTemplate;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\Response;
-use Saloon\PaginationPlugin\Contracts\Paginatable;
-use Saloon\Traits\Body\HasJsonBody;
 
-class DeleteTaskTemplateRequests extends Request
+class DeleteTaskTemplateRequest extends Request
 {
     protected Method $method = Method::DELETE;
 
