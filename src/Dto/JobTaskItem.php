@@ -6,6 +6,7 @@ class JobTaskItem
 {
     public function __construct(
         public string $name,
+        public ?string $public_name,
         public ?float $length,
         public ?float $width,
         public ?float $height,
@@ -19,12 +20,13 @@ class JobTaskItem
     {
         return new self(
             name: $data['name'],
-            length: $data['length'],
-            width: $data['width'],
-            height: $data['height'],
-            weight: $data['weight'],
-            barcode: $data['barcode'],
-            volume: $data['volume'],
+            public_name: $data['public_name'] ?? null,
+            length: $data['length'] ?? null,
+            width: $data['width'] ?? null,
+            height: $data['height'] ?? null,
+            weight: $data['weight'] ?? null,
+            barcode: $data['barcode'] ?? null,
+            volume: $data['volume'] ?? null,
         );
     }
 
