@@ -5,6 +5,7 @@ namespace Jacobtims\Tms;
 use DateInterval;
 use DateTimeImmutable;
 use Jacobtims\Tms\Concerns\SupportsJobsEndpoints;
+use Jacobtims\Tms\Concerns\SupportsTaskTemplatesEndpoints;
 use Jacobtims\Tms\Exceptions\TmsException;
 use Saloon\Contracts\OAuthAuthenticator;
 use Saloon\Helpers\OAuth2\OAuthConfig;
@@ -24,6 +25,7 @@ class Tms extends Connector implements HasPagination
     use AlwaysThrowOnErrors;
     use ClientCredentialsGrant;
     use SupportsJobsEndpoints;
+    use SupportsTaskTemplatesEndpoints;
 
     protected string $baseUrl;
 
