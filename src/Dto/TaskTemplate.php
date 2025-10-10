@@ -11,6 +11,8 @@ class TaskTemplate
         public int $quantity,
         public ?string $description,
         public ?JobTaskItem $item,
+        /** @var ChecklistItem[] */
+        public array $checklist,
         public ?bool $has_item,
         public ?int $quantity_remaining,
     ) {
@@ -25,6 +27,7 @@ class TaskTemplate
             quantity: $data['quantity'],
             description: $data['description'] ?? null,
             item: isset($data['item']) ? JobTaskItem::fromResponse($data['item']) : null,
+            checklist: ChecklistItem::collect($data['checklist'] ?? []),
             has_item: $data['has_item'] ?? null,
             quantity_remaining: $data['quantity_remaining'] ?? null,
         );
