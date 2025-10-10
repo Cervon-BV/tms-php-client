@@ -48,18 +48,18 @@ class Job
             outstanding_payment: isset($data['outstanding_payment'])
                 ? PaymentReference::fromResponse($data['outstanding_payment'])
                 : null,
-            total_tasks: $data['total_tasks'],
-            total_items: $data['total_items'],
-            has_assemble: $data['has_assemble'],
+            total_tasks: $data['total_tasks'] ?? null,
+            total_items: $data['total_items'] ?? null,
+            has_assemble: $data['has_assemble'] ?? null,
             status: $data['status'],
             tour: isset($data['tour']) ? TourReference::fromResponse($data['tour']) : null,
-            arrival_time: $data['arrival_time'],
-            service_time: $data['service_time'],
-            need_proposal: $data['need_proposal'],
-            drop_permission: $data['drop_permission'],
-            co_driver_needed: $data['co_driver_needed'],
-            updated_date: $data['updated_date'],
-            created_date: $data['created_date'],
+            arrival_time: $data['arrival_time'] ?? null,
+            service_time: $data['service_time'] ?? null,
+            need_proposal: $data['need_proposal'] ?? null,
+            drop_permission: $data['drop_permission'] ?? null,
+            co_driver_needed: $data['co_driver_needed'] ?? null,
+            updated_date: $data['updated_date'] ?? null,
+            created_date: $data['created_date'] ?? null,
         );
     }
 

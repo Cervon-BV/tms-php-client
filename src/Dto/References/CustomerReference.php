@@ -7,7 +7,7 @@ class CustomerReference
     public function __construct(
         public string $_id,
         public string $name,
-        public string $logo,
+        public ?string $logo,
     ) {
     }
 
@@ -16,7 +16,7 @@ class CustomerReference
         return new self(
             _id: $data['_id'],
             name: $data['name'],
-            logo: $data['logo'],
+            logo: $data['logo'] ?? null,
         );
     }
 

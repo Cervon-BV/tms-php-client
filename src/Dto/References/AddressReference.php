@@ -10,8 +10,8 @@ class AddressReference
         public string $city,
         public string $street,
         public string $country,
-        public float $latitude,
-        public float $longitude,
+        public ?float $latitude,
+        public ?float $longitude,
     ) {
     }
 
@@ -23,8 +23,8 @@ class AddressReference
             city: $data['city'],
             street: $data['street'],
             country: $data['country'],
-            latitude: $data['latitude'],
-            longitude: $data['longitude'],
+            latitude: $data['latitude'] ?? null,
+            longitude: $data['longitude'] ?? null,
         );
     }
 
