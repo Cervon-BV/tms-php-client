@@ -14,6 +14,7 @@ class Upload
         public string $filename,
         public string $type,
         public string $created_date,
+        public ?string $url,
     ) {
     }
 
@@ -27,6 +28,7 @@ class Upload
             filename: $data['filename'],
             type: $data['type'],
             created_date: $data['created_date'],
+            url: $data['url'] ?? null,
         );
     }
 
