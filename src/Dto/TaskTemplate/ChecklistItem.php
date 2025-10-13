@@ -1,8 +1,6 @@
 <?php
 
-namespace Cervon\Tms\Dto;
-
-use Cervon\Tms\Dto\ChecklistItem\RequiredOptions;
+namespace Cervon\Tms\Dto\TaskTemplate;
 
 class ChecklistItem
 {

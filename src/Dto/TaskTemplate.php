@@ -3,6 +3,7 @@
 namespace Cervon\Tms\Dto;
 
 use Cervon\Tms\Dto\Job\TaskItem;
+use Cervon\Tms\Dto\TaskTemplate\ChecklistItem;
 
 class TaskTemplate
 {

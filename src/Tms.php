@@ -2,6 +2,7 @@
 
 namespace Cervon\Tms;
 
+use Cervon\Tms\Concerns\SupportsUploadsEndpoints;
 use DateInterval;
 use DateTimeImmutable;
 use Cervon\Tms\Concerns\SupportsJobsEndpoints;
@@ -26,6 +27,7 @@ class Tms extends Connector implements HasPagination
     use ClientCredentialsGrant;
     use SupportsJobsEndpoints;
     use SupportsTaskTemplatesEndpoints;
+    use SupportsUploadsEndpoints;
 
     protected string $baseUrl;
 
