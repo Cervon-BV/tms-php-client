@@ -6,8 +6,9 @@ class UserReference
 {
     public function __construct(
         public string $_id,
-        public string $code,
-        public string $date,
+        public string $first_name,
+        public string $last_name,
+        public ?string $avatar,
     ) {
     }
 
@@ -15,8 +16,9 @@ class UserReference
     {
         return new self(
             _id: $data['_id'],
-            code: $data['code'],
-            date: $data['date'],
+            first_name: $data['first_name'],
+            last_name: $data['last_name'],
+            avatar: $data['avatar'] ?? null,
         );
     }
 
