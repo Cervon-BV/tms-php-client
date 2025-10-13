@@ -2,6 +2,7 @@
 
 namespace Cervon\Tms\Dto;
 
+use Cervon\Tms\Dto\Job\Completion;
 use Cervon\Tms\Dto\References\AddressReference;
 use Cervon\Tms\Dto\References\ContactReference;
 use Cervon\Tms\Dto\References\CustomerReference;
@@ -30,6 +31,7 @@ class Job
         public ?bool $need_proposal,
         public ?bool $drop_permission,
         public ?bool $co_driver_needed,
+        public ?Completion $completion,
         public ?string $updated_date,
         public ?string $created_date,
     ) {
@@ -58,6 +60,7 @@ class Job
             need_proposal: $data['need_proposal'] ?? null,
             drop_permission: $data['drop_permission'] ?? null,
             co_driver_needed: $data['co_driver_needed'] ?? null,
+            completion: isset($data['completion']) ? Completion::fromResponse($data['completion']) : null,
             updated_date: $data['updated_date'] ?? null,
             created_date: $data['created_date'] ?? null,
         );
