@@ -1,8 +1,8 @@
 <?php
 
-namespace Jacobtims\Tms\Requests\TaskTemplates;
+namespace Cervon\Tms\Requests\TaskTemplates;
 
-use Jacobtims\Tms\Dto\TaskTemplate;
+use Cervon\Tms\Dto\TaskTemplate;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

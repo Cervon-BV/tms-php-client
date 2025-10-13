@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms\Requests\Jobs;
+namespace Cervon\Tms\Requests\Jobs;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

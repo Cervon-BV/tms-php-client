@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms\Dto\References;
+namespace Cervon\Tms\Dto\References;
 
 class ContactReference
 {

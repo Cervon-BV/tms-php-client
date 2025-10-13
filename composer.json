@@ -1,5 +1,5 @@
 {
-    "name": "jacobtims/tms-php-client",
+    "name": "cervon/tms-php-client",
     "description": "A PHP client for the TMS API.",
     "type": "library",
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jacobtims\\Tms\\": "src/"
+            "Cervon\\Tms\\": "src/"
         }
     },
     "require-dev": {

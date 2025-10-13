@@ -1,13 +1,13 @@
 <?php
 
-namespace Jacobtims\Tms\Concerns;
+namespace Cervon\Tms\Concerns;
 
-use Jacobtims\Tms\Dto\Job;
-use Jacobtims\Tms\Requests\Jobs\CreateJobRequest;
-use Jacobtims\Tms\Requests\Jobs\DeleteJobRequest;
-use Jacobtims\Tms\Requests\Jobs\ListJobsRequests;
-use Jacobtims\Tms\Requests\Jobs\UpdateJobRequest;
-use Jacobtims\Tms\Tms;
+use Cervon\Tms\Dto\Job;
+use Cervon\Tms\Requests\Jobs\CreateJobRequest;
+use Cervon\Tms\Requests\Jobs\DeleteJobRequest;
+use Cervon\Tms\Requests\Jobs\ListJobsRequests;
+use Cervon\Tms\Requests\Jobs\UpdateJobRequest;
+use Cervon\Tms\Tms;
 
 /** @mixin Tms */
 trait SupportsJobsEndpoints

@@ -1,12 +1,12 @@
 <?php
 
-namespace Jacobtims\Tms\Dto;
+namespace Cervon\Tms\Dto;
 
-use Jacobtims\Tms\Dto\References\AddressReference;
-use Jacobtims\Tms\Dto\References\ContactReference;
-use Jacobtims\Tms\Dto\References\CustomerReference;
-use Jacobtims\Tms\Dto\References\PaymentReference;
-use Jacobtims\Tms\Dto\References\TourReference;
+use Cervon\Tms\Dto\References\AddressReference;
+use Cervon\Tms\Dto\References\ContactReference;
+use Cervon\Tms\Dto\References\CustomerReference;
+use Cervon\Tms\Dto\References\PaymentReference;
+use Cervon\Tms\Dto\References\TourReference;
 
 class Job
 {

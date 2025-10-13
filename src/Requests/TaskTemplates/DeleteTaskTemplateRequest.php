@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms\Requests\TaskTemplates;
+namespace Cervon\Tms\Requests\TaskTemplates;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

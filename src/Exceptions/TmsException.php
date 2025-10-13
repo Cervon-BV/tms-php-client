@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms\Exceptions;
+namespace Cervon\Tms\Exceptions;
 
 use Exception;
 use Saloon\Http\Response;

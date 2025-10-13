@@ -1,8 +1,8 @@
 <?php
 
-namespace Jacobtims\Tms\Requests\Jobs;
+namespace Cervon\Tms\Requests\Jobs;
 
-use Jacobtims\Tms\Dto\Job;
+use Cervon\Tms\Dto\Job;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

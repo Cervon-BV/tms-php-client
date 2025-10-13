@@ -1,13 +1,14 @@
 <?php
 
-namespace Jacobtims\Tms\Dto;
+namespace Cervon\Tms\Dto;
 
 class ChecklistItem
 {
     public function __construct(
         public string $description,
         public ?RequiredOptions $required_options,
-    ) {}
+    ) {
+    }
 
     public static function fromResponse(array $data): self
     {
@@ -31,7 +32,8 @@ class RequiredOptions
         public bool $mandatory,
         public string $type,
         public float $quantity,
-    ) {}
+    ) {
+    }
 
     public static function fromResponse(array $data): self
     {

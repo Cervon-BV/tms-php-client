@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms\Dto;
+namespace Cervon\Tms\Dto;
 
 class JobTask
 {

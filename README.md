@@ -37,13 +37,14 @@ $authenticator = $tms->getAccessToken();
 ```
 
 ### Disabling SSL verify
-By default, verify SSL is enabled. When you want to for example test the API locally, you can disable SSL verification. 
+By default, SSL verification is enabled. If you want to test the API locally, you can disable SSL verification.
 ```php
 $tms = new Tms($CLIENT_ID, $CLIENT_SECRET, $TMS_BASE_URL, verifySsl: false);
 ```
 
 ### Caching authenticator
-To prevent sending authentication requests every time you can serialize and cache the authenticator object. E.g. in Laravel.
+To avoid sending authentication requests every time, you can serialize and cache the authenticator object. 
+Example in Laravel:
 ```php
 use Cervon\Tms\Tms;
 use Illuminate\Support\Facades\Cache;

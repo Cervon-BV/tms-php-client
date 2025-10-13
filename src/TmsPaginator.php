@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacobtims\Tms;
+namespace Cervon\Tms;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Http\Request;

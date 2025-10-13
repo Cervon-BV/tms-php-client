@@ -1,12 +1,12 @@
 <?php
 
-namespace Jacobtims\Tms;
+namespace Cervon\Tms;
 
 use DateInterval;
 use DateTimeImmutable;
-use Jacobtims\Tms\Concerns\SupportsJobsEndpoints;
-use Jacobtims\Tms\Concerns\SupportsTaskTemplatesEndpoints;
-use Jacobtims\Tms\Exceptions\TmsException;
+use Cervon\Tms\Concerns\SupportsJobsEndpoints;
+use Cervon\Tms\Concerns\SupportsTaskTemplatesEndpoints;
+use Cervon\Tms\Exceptions\TmsException;
 use Saloon\Contracts\OAuthAuthenticator;
 use Saloon\Helpers\OAuth2\OAuthConfig;
 use Saloon\Http\Connector;

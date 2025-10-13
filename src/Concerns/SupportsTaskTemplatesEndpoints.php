@@ -1,13 +1,13 @@
 <?php
 
-namespace Jacobtims\Tms\Concerns;
+namespace Cervon\Tms\Concerns;
 
-use Jacobtims\Tms\Dto\TaskTemplate;
-use Jacobtims\Tms\Requests\TaskTemplates\CreateTaskTemplateRequest;
-use Jacobtims\Tms\Requests\TaskTemplates\DeleteTaskTemplateRequest;
-use Jacobtims\Tms\Requests\TaskTemplates\ListTaskTemplatesRequest;
-use Jacobtims\Tms\Requests\TaskTemplates\UpdateTaskTemplateRequest;
-use Jacobtims\Tms\Tms;
+use Cervon\Tms\Dto\TaskTemplate;
+use Cervon\Tms\Requests\TaskTemplates\CreateTaskTemplateRequest;
+use Cervon\Tms\Requests\TaskTemplates\DeleteTaskTemplateRequest;
+use Cervon\Tms\Requests\TaskTemplates\ListTaskTemplatesRequest;
+use Cervon\Tms\Requests\TaskTemplates\UpdateTaskTemplateRequest;
+use Cervon\Tms\Tms;
 
 /** @mixin Tms */
 trait SupportsTaskTemplatesEndpoints
