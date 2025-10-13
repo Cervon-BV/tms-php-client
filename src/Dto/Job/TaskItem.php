@@ -1,8 +1,8 @@
 <?php
 
-namespace Cervon\Tms\Dto;
+namespace Cervon\Tms\Dto\Job;
 
-class JobTaskItem
+class TaskItem
 {
     public function __construct(
         public string $name,

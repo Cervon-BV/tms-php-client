@@ -1,15 +1,17 @@
 <?php
 
-namespace Cervon\Tms\Dto;
+namespace Cervon\Tms\Dto\Job;
 
-class JobTask
+class Task
 {
     public function __construct(
         public string $tid,
         public string $type,
         public int $quantity,
         public ?string $description,
-        public ?JobTaskItem $item,
+        public ?TaskItem $item,
+        /** @var TaskChecklist[] */
+        public ?array $checklist,
         public ?bool $has_item,
         public ?int $quantity_remaining,
     ) {
@@ -22,7 +24,8 @@ class JobTask
             type: $data['type'],
             quantity: $data['quantity'],
             description: $data['description'] ?? null,
-            item: isset($data['item']) ? JobTaskItem::fromResponse($data['item']) : null,
+            item: isset($data['item']) ? TaskItem::fromResponse($data['item']) : null,
+            checklist: isset($data['checklist']) ? TaskChecklist::collect($data['checklist']) : null,
             has_item: $data['has_item'] ?? null,
             quantity_remaining: $data['quantity_remaining'] ?? null,
         );

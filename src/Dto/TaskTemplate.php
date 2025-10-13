@@ -2,19 +2,21 @@
 
 namespace Cervon\Tms\Dto;
 
+use Cervon\Tms\Dto\Job\TaskItem;
+
 class TaskTemplate
 {
     public function __construct(
-        public string $_id,
-        public string $name,
-        public string $type,
-        public int $quantity,
-        public ?string $description,
-        public ?JobTaskItem $item,
+        public string    $_id,
+        public string    $name,
+        public string    $type,
+        public int       $quantity,
+        public ?string   $description,
+        public ?TaskItem $item,
         /** @var ChecklistItem[] */
-        public array $checklist,
-        public ?bool $has_item,
-        public ?int $quantity_remaining,
+        public array     $checklist,
+        public ?bool     $has_item,
+        public ?int      $quantity_remaining,
     ) {
     }
 
@@ -26,7 +28,7 @@ class TaskTemplate
             type: $data['type'],
             quantity: $data['quantity'],
             description: $data['description'] ?? null,
-            item: isset($data['item']) ? JobTaskItem::fromResponse($data['item']) : null,
+            item: isset($data['item']) ? TaskItem::fromResponse($data['item']) : null,
             checklist: ChecklistItem::collect($data['checklist'] ?? []),
             has_item: $data['has_item'] ?? null,
             quantity_remaining: $data['quantity_remaining'] ?? null,

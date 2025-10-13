@@ -3,6 +3,7 @@
 namespace Cervon\Tms\Dto;
 
 use Cervon\Tms\Dto\Job\Completion;
+use Cervon\Tms\Dto\Job\Task;
 use Cervon\Tms\Dto\References\AddressReference;
 use Cervon\Tms\Dto\References\ContactReference;
 use Cervon\Tms\Dto\References\CustomerReference;
@@ -18,7 +19,7 @@ class Job
         public CustomerReference $customer,
         public ContactReference $contact,
         public AddressReference $address,
-        /** @var JobTask[] */
+        /** @var Task[] */
         public array $tasks,
         public ?PaymentReference $outstanding_payment,
         public ?int $total_tasks,
@@ -46,7 +47,7 @@ class Job
             customer: CustomerReference::fromResponse($data['customer']),
             contact: ContactReference::fromResponse($data['contact']),
             address: AddressReference::fromResponse($data['address']),
-            tasks: JobTask::collect($data['tasks'] ?? []),
+            tasks: Task::collect($data['tasks'] ?? []),
             outstanding_payment: isset($data['outstanding_payment'])
                 ? PaymentReference::fromResponse($data['outstanding_payment'])
                 : null,
