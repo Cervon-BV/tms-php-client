@@ -18,7 +18,7 @@ class ShowUploadRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return "/upload/{$this->_id}";
+        return "/uploads/{$this->_id}";
     }
 
     public function createDtoFromResponse(Response $response): Upload
