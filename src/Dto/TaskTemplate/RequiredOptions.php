@@ -6,8 +6,8 @@ class RequiredOptions
 {
     public function __construct(
         public bool $mandatory,
-        public string $type,
-        public float $quantity,
+        public ?string $type,
+        public ?float $quantity,
     ) {
     }
 
@@ -15,8 +15,8 @@ class RequiredOptions
     {
         return new self(
             mandatory: $data['mandatory'],
-            type: $data['type'],
-            quantity: $data['quantity'],
+            type: $data['type'] ?? null,
+            quantity: $data['quantity'] ?? null,
         );
     }
 }
