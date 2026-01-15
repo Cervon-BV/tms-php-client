@@ -6,7 +6,7 @@ class ContactReference
 {
     public function __construct(
         public string $name,
-        public string $phone,
+        public ?string $phone,
         public string $email,
         public string $locale,
     ) {
@@ -16,9 +16,9 @@ class ContactReference
     {
         return new self(
             name: $data['name'],
-            phone: $data['phone'],
+            phone: $data['phone'] ?? null,
             email: $data['email'],
-            locale: $data['locale'],
+            locale: $data['locale'] ?? 'en',
         );
     }
 
